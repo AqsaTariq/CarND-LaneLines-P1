@@ -82,4 +82,4 @@ Since we expect this solution to work on public roads it is reasonable to assume
 
 To solve the "shakiness" of the lines I added a smoothing parameter and would only allow lines to change by 15% on the final version.
 
-The results can be seen in this [video](https://github.com/bguisard/CarND-LaneLines-P1/test_videos_output/challenge.mp4)
+The results can be seen in this [video](https://github.com/bguisard/CarND-LaneLines-P1/tree/master/test_videos_output/challenge.mp4)
