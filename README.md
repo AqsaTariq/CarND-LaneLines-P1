@@ -11,7 +11,7 @@ In this project you will detect lane lines in images using Python and OpenCV.
 
 Proposed Solution
 ---
-* Start with an image of frame from clip
+* Start with an image or frame from a video clip
 
 <img src="test_images/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
 
@@ -46,7 +46,7 @@ Proposed Solution
 
 Most of the steps above are straight forward and can be easily achieved with OpenCV.
 
-I decided to not use color masking on my first attempt and it worked pretty well for the first part of the project.
+I decided not to use color masking on my first attempt and it worked pretty well for the first part of the project.
 
 The quadrilateral used to mask the image was hardcoded based on the images we received as an input. Ideally we want our function to work on any video stream, so that wasn't a good start. I will come back to this later on, when discussing the Challenge.
 
@@ -80,6 +80,6 @@ The last problem I faced was that it was still not calculating lines for all the
 
 Since we expect this solution to work on public roads it is reasonable to assume that the lane line from the previous frame is a good approximation to where the lane line should be in the current frame. So for all frames that had no lines identified I used the line from the previous frame.
 
-To solve the "shakiness" of the lines I added a smoothing parameter and would only allow lines to change by 15% on the final version.
+To solve the "shakiness" of the lines I added a smoothing parameter and would only allow lines to change by 15% per iteration on the final version.
 
 The results can be seen in this [video](https://github.com/bguisard/CarND-LaneLines-P1/tree/master/test_videos_output/challenge.mp4)
